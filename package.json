@@ -1,0 +1,27 @@
+{
+  "name": "blogwebsite",
+  "version": "1.0.0",
+  "description": "blog website using nodejs and react",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ahmedmagdy11/blog-website.git"
+  },
+  "author": "ahmedmagdy11",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ahmedmagdy11/blog-website/issues"
+  },
+  "homepage": "https://github.com/ahmedmagdy11/blog-website#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^5.9.20"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
+}
