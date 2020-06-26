@@ -1,11 +1,18 @@
-import React from "react";
+import React, { useRef } from "react";
+import { useHistory } from "react-router-dom";
 
-import AddBlog from "../components/addBlog";
 const Blogs = () => {
+  let history = useHistory();
+  const link = useRef();
+  const HandelAddBlog=()=>{
+    history.push('/write');
+  }
+  
   return (
     <React.Fragment>
-      <AddBlog />
       <h1>all of my blogs</h1>
+      <button onClick={HandelAddBlog}> add blogs</button>
+     
     </React.Fragment>
   );
 };
