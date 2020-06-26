@@ -5,10 +5,11 @@ const router = express();
 router.get("/blogs", async (req, res) => {
   try {
     const doc = await Blog.find().exec();
+    res.send(doc);
   } catch (err) {
     res.sendStatus(500);
   }
-  res.send(doc);
+  
 });
 
 router.post("/add", async (req, res) => {
