@@ -1,7 +1,10 @@
 const express = require("express");
 const Blog = require("../models/blogs");
+const AuthRouter = require('./authentication')
 const router = express();
 
+
+router.use(AuthRouter)
 router.get("/blogs", async (req, res) => {
   try {
     const doc = await Blog.find().exec();
