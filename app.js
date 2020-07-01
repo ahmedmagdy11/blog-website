@@ -1,6 +1,7 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const router = require("./routes/router");
+const generateKey = require("./functions/generateKeys");
 const app = express();
 
 app.use((req, res, next) => {
@@ -26,6 +27,7 @@ mongoose.connect(
       throw new Error(err);
     }
     app.listen(5000, () => {
+      generateKey();
       console.log(`app is listening on port ${5000}`);
     });
   }
